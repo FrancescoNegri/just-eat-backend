@@ -1,0 +1,56 @@
+{
+    "NAME": "Creazioni DAVA",
+    "CATEGORY": "Gelato, Dolci",
+    "LOGO": "//d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/202366.gif",
+    "RATING": "5.4",
+    "HREF": "/restaurants-creazionedava/menu",
+    "MENU": {
+        "pasticceriamignon": {
+            "NAME": "Pasticceria Mignon",
+            "DESCRIPTION": "",
+            "PRODUCTS": {
+                "pasticceriamignon1kg": {
+                    "NAME": "Pasticceria Mignon1 Kg",
+                    "DESCRIPTION": "scelta 7 gusti",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "45 Pezzi",
+                            "PRICE": "€23,00"
+                        }
+                    ]
+                },
+                "pasticceriamignon0.5kg": {
+                    "NAME": "Pasticceria Mignon0.5 Kg",
+                    "DESCRIPTION": "scelta 7 gusti",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "20 Pezzi",
+                            "PRICE": "€11,50"
+                        }
+                    ]
+                },
+                "pasticceriamignon750gr": {
+                    "NAME": "Pasticceria Mignon750 gr",
+                    "DESCRIPTION": "scelta 7 gusti",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "35 Pezzi",
+                            "PRICE": "€18,00"
+                        }
+                    ]
+                }
+            }
+        },
+        "vini": {
+            "NAME": "Vini",
+            "DESCRIPTION": "",
+            "PRODUCTS": {
+                "prosecco": {
+                    "NAME": "Prosecco",
+                    "DESCRIPTION": "",
+                    "PRICE": "€10,00"
+                }
+            }
+        }
+    }
+}

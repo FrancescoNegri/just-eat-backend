@@ -1,0 +1,1103 @@
+{
+    "NAME": "Pizza 21",
+    "CATEGORY": "Pizza, Kebab",
+    "LOGO": "//d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/205656.gif",
+    "RATING": "4.7",
+    "HREF": "/restaurants-pizza21-reggioemilia/menu",
+    "MENU": {
+        "menù": {
+            "NAME": "Menù",
+            "DESCRIPTION": "",
+            "PRODUCTS": {
+                "menùpanino": {
+                    "NAME": "Menù Panino",
+                    "DESCRIPTION": "panino, patatine e una lattina",
+                    "PRICE": "€ 5,00"
+                },
+                "menùpiadina": {
+                    "NAME": "Menù Piadina",
+                    "DESCRIPTION": "piadina, patatine e una lattina",
+                    "PRICE": "€ 5,50"
+                },
+                "menùpaninocheeseburger": {
+                    "NAME": "Menù Panino Cheeseburger",
+                    "DESCRIPTION": "panino, hamburger, patatine e  una lattina",
+                    "PRICE": "€ 5,00"
+                },
+                "menùkebabepane": {
+                    "NAME": "Menù Kebab e Pane",
+                    "DESCRIPTION": "piatto kebaba, verdure miste, pane e una lattina",
+                    "PRICE": "€ 6,50"
+                },
+                "menùpaninofalafel": {
+                    "NAME": "Menù Panino Falafel",
+                    "DESCRIPTION": "panino falafel, patatine e bibita",
+                    "PRICE": "€ 5,00"
+                }
+            }
+        },
+        "lenostrepizze": {
+            "NAME": "Le Nostre Pizze",
+            "DESCRIPTION": "",
+            "PRODUCTS": {
+                "margherita": {
+                    "NAME": "Margherita",
+                    "DESCRIPTION": "pomodoro e mozzarella",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 2,50"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 4,00"
+                        }
+                    ]
+                },
+                "napoli": {
+                    "NAME": "Napoli",
+                    "DESCRIPTION": "pomodoro, mozzarella, acciughe e origano",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,00"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 5,00"
+                        }
+                    ]
+                },
+                "romana": {
+                    "NAME": "Romana",
+                    "DESCRIPTION": "pomodoro, mozzarella, capperi e acciughe",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,50"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 5,50"
+                        }
+                    ]
+                },
+                "siciliana": {
+                    "NAME": "Siciliana",
+                    "DESCRIPTION": "pomodoro, mozzarella, capperi, acciughe eolive",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,50"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 5,50"
+                        }
+                    ]
+                },
+                "reginamargherita": {
+                    "NAME": "Regina Margherita",
+                    "DESCRIPTION": "pomodoro,mozzarella, mozzarella di bufala e doppio pasto",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,00"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 6,00"
+                        }
+                    ]
+                },
+                "funghi": {
+                    "NAME": "Funghi",
+                    "DESCRIPTION": "pomodoro, mozzarella e funghi",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,00"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 5,00"
+                        }
+                    ]
+                },
+                "porcini": {
+                    "NAME": "Porcini",
+                    "DESCRIPTION": "pomodoro, mozzarella e funghi porcini",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,00"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 5,00"
+                        }
+                    ]
+                },
+                "speciale": {
+                    "NAME": "Speciale",
+                    "DESCRIPTION": "pomodoro, mozzarella di bufala, pomodorini e basilico",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,80"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 6,50"
+                        }
+                    ]
+                },
+                "bufala": {
+                    "NAME": "Bufala",
+                    "DESCRIPTION": "pomodoro e mozzarella di bufala",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,00"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 5,50"
+                        }
+                    ]
+                },
+                "tonnoecipolla": {
+                    "NAME": "Tonno e Cipolla",
+                    "DESCRIPTION": "pomodoro, mozzarella, tonno e cipolla",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,50"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 5,00"
+                        }
+                    ]
+                },
+                "salsiccia": {
+                    "NAME": "Salsiccia",
+                    "DESCRIPTION": "pomodoro, mozzarella, e salsiccia",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,00"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 5,00"
+                        }
+                    ]
+                },
+                "prosciutto": {
+                    "NAME": "Prosciutto",
+                    "DESCRIPTION": "pomodoro, mozzarella e prosciutto",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,00"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 5,00"
+                        }
+                    ]
+                },
+                "wurstel": {
+                    "NAME": "Wurstel",
+                    "DESCRIPTION": "pomodoro, mozzarella e wurstel",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,00"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 5,00"
+                        }
+                    ]
+                },
+                "diavola": {
+                    "NAME": "Diavola",
+                    "DESCRIPTION": "pomodoro, mozzarella e diavola",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,00"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 5,00"
+                        }
+                    ]
+                },
+                "cipolla": {
+                    "NAME": "Cipolla",
+                    "DESCRIPTION": "pomodoro, mozzarella e cipolla",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,00"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 5,00"
+                        }
+                    ]
+                },
+                "carciofini": {
+                    "NAME": "Carciofini",
+                    "DESCRIPTION": "pomodoro, mozzarella e carciofini",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,00"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 5,00"
+                        }
+                    ]
+                },
+                "prosciuttoefunghi": {
+                    "NAME": "Prosciutto e Funghi",
+                    "DESCRIPTION": "pomodoro, mozzarella, prosciutto cotto e funghi",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,50"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 5,50"
+                        }
+                    ]
+                },
+                "4stagioni": {
+                    "NAME": "4 Stagioni",
+                    "DESCRIPTION": "pomodoro, mozzarella, prosciutto cotto, funghi, carciofi  e salsiccia",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,80"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 6,50"
+                        }
+                    ]
+                },
+                "4formaggi": {
+                    "NAME": "4 Formaggi",
+                    "DESCRIPTION": "pomodoro, mozzarella, edamer, stracchino,gorgonzola e parmigiano",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,80"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 6,50"
+                        }
+                    ]
+                },
+                "patatella": {
+                    "NAME": "Patatella",
+                    "DESCRIPTION": "pomodoro, mozzarella e patatine fritte",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,00"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 5,00"
+                        }
+                    ]
+                },
+                "fruttidimare": {
+                    "NAME": "Frutti di Mare",
+                    "DESCRIPTION": "pomodoro, mozzarella e insalata di mare",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,90"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 7,00"
+                        }
+                    ]
+                },
+                "vegetariana": {
+                    "NAME": "Vegetariana",
+                    "DESCRIPTION": "pomodoro, mozzarella e verdure miste",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,80"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 6,50"
+                        }
+                    ]
+                },
+                "spinaci": {
+                    "NAME": "Spinaci",
+                    "DESCRIPTION": "pomodoro, mozzarella, spinaci e parmigiano",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,00"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 5,00"
+                        }
+                    ]
+                },
+                "asparagi": {
+                    "NAME": "Asparagi",
+                    "DESCRIPTION": "pomodoro, mozzarella, asparagi e parmigiano",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,50"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 5,50"
+                        }
+                    ]
+                },
+                "mexico": {
+                    "NAME": "Mexico",
+                    "DESCRIPTION": "pomodoro, mozzarella, verdure miste e salame piccante",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,90"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 7,00"
+                        }
+                    ]
+                },
+                "friarielli": {
+                    "NAME": "Friarielli",
+                    "DESCRIPTION": "pomodoro, mozzarella e friarielli",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,90"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 7,00"
+                        }
+                    ]
+                },
+                "pizzaleggera": {
+                    "NAME": "Pizza Leggera",
+                    "DESCRIPTION": "pomodoro, mozzarella, pomodorini, gamberetti e zucchine grigliate",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,80"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 6,50"
+                        }
+                    ]
+                },
+                "mariemonti": {
+                    "NAME": "Mari e Monti",
+                    "DESCRIPTION": "pomodoro, mozzarella, gamberi, funghi e mozzarella di bufala",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,90"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 7,00"
+                        }
+                    ]
+                },
+                "tirolese": {
+                    "NAME": "Tirolese",
+                    "DESCRIPTION": "pomodoro, mozzarella,speck, rucola, scamorza e wurstel",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,80"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 6,50"
+                        }
+                    ]
+                },
+                "delmonte": {
+                    "NAME": "Del Monte",
+                    "DESCRIPTION": "pomodoro, mozzarella di bufala, pomodorini e funghi porcini",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,90"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 7,00"
+                        }
+                    ]
+                },
+                "boscaiola": {
+                    "NAME": "Boscaiola",
+                    "DESCRIPTION": "pomodoro, mozzarella, funghi misti e asparagi",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,80"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 6,50"
+                        }
+                    ]
+                },
+                "sottobosco": {
+                    "NAME": "Sotto Bosco",
+                    "DESCRIPTION": "pomodoro, mozzarella e funghi di bosco",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,80"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 6,50"
+                        }
+                    ]
+                },
+                "sopravento": {
+                    "NAME": "Sopravento",
+                    "DESCRIPTION": "pomodoro, mozzarella, gorgonzola, pancetta e spinaci",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,80"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 6,50"
+                        }
+                    ]
+                },
+                "contadina": {
+                    "NAME": "Contadina",
+                    "DESCRIPTION": "pomodoro, mozzarella, pancetta, cipolla, rucola e parmigiano",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,80"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 6,50"
+                        }
+                    ]
+                },
+                "rigattiere": {
+                    "NAME": "Rigattiere",
+                    "DESCRIPTION": "pomodoro, mozzarella, speck, rucola e scaglie di parmigiana",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,80"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 6,50"
+                        }
+                    ]
+                },
+                "portacastello": {
+                    "NAME": "Porta Castello",
+                    "DESCRIPTION": "pomodoro, mozzarella, gorgonzola, salame piccante e funghi porcini",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,80"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 6,50"
+                        }
+                    ]
+                },
+                "barbecue": {
+                    "NAME": "Barbecue",
+                    "DESCRIPTION": "pomodoro, mozzarella, salsiccia, wurstel e salame piccante",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,80"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 6,50"
+                        }
+                    ]
+                },
+                "baruffo": {
+                    "NAME": "Baruffo",
+                    "DESCRIPTION": "pomodoro, mozzarella, gorgonzola, radicchio e salsiccia",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,60"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 6,50"
+                        }
+                    ]
+                },
+                "greca": {
+                    "NAME": "Greca",
+                    "DESCRIPTION": "pomodoro, mozzarella e olive nere",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,00"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 5,00"
+                        }
+                    ]
+                },
+                "romagnola": {
+                    "NAME": "Romagnola",
+                    "DESCRIPTION": "pomodoro, mozzarella, peperoni, salsiccia e cipolla",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,80"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 6,00"
+                        }
+                    ]
+                },
+                "degustibus": {
+                    "NAME": "Degustibus",
+                    "DESCRIPTION": "pomodoro, mozzarella, pancetta, cipolla, parmigiano e zucchine",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,80"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 6,50"
+                        }
+                    ]
+                },
+                "buongustaio": {
+                    "NAME": "Buongustaio",
+                    "DESCRIPTION": "pomodoro, mozzarella, stracchino e pancetta",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,60"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 6,00"
+                        }
+                    ]
+                },
+                "orgogliosa": {
+                    "NAME": "Orgogliosa",
+                    "DESCRIPTION": "pomodoro, pomodorini freschi, aglio, asparagi, pancetta e parmigiano",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,60"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 6,00"
+                        }
+                    ]
+                },
+                "tartufo": {
+                    "NAME": "Tartufo",
+                    "DESCRIPTION": "pomodoro, mozzarella, crema di tartufo, funghi porcini e grana",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,90"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 7,00"
+                        }
+                    ]
+                },
+                "valdostana": {
+                    "NAME": "Valdostana",
+                    "DESCRIPTION": "pomodoro, mozzarella, funghi freschi, prosciutto e fontina",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,60"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 6,00"
+                        }
+                    ]
+                },
+                "laportuense": {
+                    "NAME": "La Portuense",
+                    "DESCRIPTION": "pomodoro, origano, aglio, frutti di mare e acciughe",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,60"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 6,00"
+                        }
+                    ]
+                },
+                "pizzakebab": {
+                    "NAME": "Pizza Kebab",
+                    "DESCRIPTION": "pomodoro, mozzarella, kebab, salse e verdure miste",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,60"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 6,00"
+                        }
+                    ]
+                },
+                "lapeisa": {
+                    "NAME": "La Peisa",
+                    "DESCRIPTION": "pomodoro, mozzarella, friarielli e melanzane",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,60"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 6,00"
+                        }
+                    ]
+                },
+                "pizza21": {
+                    "NAME": "Pizza 21",
+                    "DESCRIPTION": "pomodoro, mozzarella di bufala, grana,spinaci, basilico e pomodorini",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 4,00"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 7,20"
+                        }
+                    ]
+                }
+            }
+        },
+        "lenostrepizzespeciali": {
+            "NAME": "Le Nostre Pizze Speciali",
+            "DESCRIPTION": "",
+            "PRODUCTS": {
+                "mascalzone": {
+                    "NAME": "Mascalzone",
+                    "DESCRIPTION": "pomodoro, mozzarella, pancetta, cipolla e parmigiano",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,80"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 6,50"
+                        }
+                    ]
+                },
+                "pizzarollkebab": {
+                    "NAME": "Pizza Roll Kebab",
+                    "DESCRIPTION": "mozzarella, carne, insalate e salse",
+                    "PRICE": "€ 6,00"
+                }
+            }
+        },
+        "pizzemaxi": {
+            "NAME": "Pizze Maxi",
+            "DESCRIPTION": "ideale per tre persone",
+            "PRODUCTS": {
+                "": {
+                    "NAME": "",
+                    "DESCRIPTION": ""
+                },
+                "maximargherita": {
+                    "NAME": "MaxiMargherita",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 8,00"
+                },
+                "maxipizza2gusti": {
+                    "NAME": "Maxi Pizza 2 Gusti",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 9,00"
+                },
+                "maxipizzafarcita": {
+                    "NAME": "Maxi Pizza Farcita",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 10,00"
+                }
+            }
+        },
+        "pizzemezzometro": {
+            "NAME": "Pizze Mezzo Metro",
+            "DESCRIPTION": "",
+            "PRODUCTS": {
+                "mezzometromargherita": {
+                    "NAME": "Mezzo Metro Margherita",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 12,00"
+                },
+                "mezzometro2gusti": {
+                    "NAME": "Mezzo Metro 2 Gusti",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 15,00"
+                },
+                "mezzometrofarcita": {
+                    "NAME": "Mezzo Metro Farcita",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 18,00"
+                }
+            }
+        },
+        "calzoni": {
+            "NAME": "Calzoni",
+            "DESCRIPTION": "",
+            "PRODUCTS": {
+                "calzonenormale": {
+                    "NAME": "Calzone Normale",
+                    "DESCRIPTION": "pomodoro, mozzarella e prosciutto cotto",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,60"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 6,00"
+                        }
+                    ]
+                },
+                "calzonefarcito": {
+                    "NAME": "Calzone Farcito",
+                    "DESCRIPTION": "pomodoro, mozzarella, prosciutto cotto, funghi e carciofini",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 3,60"
+                        },
+                        {
+                            "NAME": "Normale",
+                            "PRICE": "€ 6,00"
+                        }
+                    ]
+                },
+                "calzonekebab": {
+                    "NAME": "Calzone Kebab",
+                    "DESCRIPTION": "pomodoro, mozzarella, carne e salse",
+                    "PRICE": "€ 6,00"
+                }
+            }
+        },
+        "lenostrepiadine": {
+            "NAME": "Le Nostre Piadine",
+            "DESCRIPTION": "",
+            "PRODUCTS": {
+                "piadinaconseekhkebab": {
+                    "NAME": "Piadina con Seekh Kebab",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 4,00"
+                },
+                "piadinaconsalamepiccante": {
+                    "NAME": "Piadina con Salame Piccante",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 4,00"
+                },
+                "piadinaconprosciuttocotto": {
+                    "NAME": "Piadina con Prosciutto Cotto",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 4,00"
+                },
+                "piadinaconwursteleketchup": {
+                    "NAME": "Piadina con Wurstel e Ketchup",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 4,00"
+                },
+                "piadinaconwurstelemaionese": {
+                    "NAME": "Piadina con Wurstel e Maionese",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 4,00"
+                },
+                "piadinacaprese": {
+                    "NAME": "Piadina Caprese",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 4,00"
+                },
+                "piadinaconkebab": {
+                    "NAME": "Piadina con Kebab",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 4,00"
+                },
+                "piadinaconsalsiccia": {
+                    "NAME": "Piadina con Salsiccia",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 4,00"
+                },
+                "piadinaconstracchinoerucola": {
+                    "NAME": "Piadina con Stracchino e Rucola",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 4,50"
+                },
+                "piadinaconverduregrigliate": {
+                    "NAME": "Piadina con Verdure Grigliate",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 4,50"
+                },
+                "piadinaconsalsicciaecipolla": {
+                    "NAME": "Piadina con Salsiccia e Cipolla",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 4,50"
+                },
+                "piadinaconsalsicciaepeperoni": {
+                    "NAME": "Piadina con Salsiccia e Peperoni",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 4,50"
+                },
+                "piadinaconsalsiccia,cipollaepeperoni": {
+                    "NAME": "Piadina con  Salsiccia, Cipolla e Peperoni",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 4,80"
+                }
+            }
+        },
+        "specialità": {
+            "NAME": "Specialità",
+            "DESCRIPTION": "",
+            "PRODUCTS": {
+                "paninoseekhkebab": {
+                    "NAME": "Panino Seekh Kebab",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 3,50"
+                },
+                "hotdog": {
+                    "NAME": "Hot Dog",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 3,50"
+                },
+                "polpettedipollo": {
+                    "NAME": "Polpette di Pollo",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 2,50"
+                },
+                "samosapollo": {
+                    "NAME": "Samosa Pollo",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 0,50"
+                },
+                "samosavegetariano": {
+                    "NAME": "Samosa Vegetariano",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 0,50"
+                },
+                "tranciomargherita": {
+                    "NAME": "Trancio Margherita",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 1,50"
+                },
+                "tranciofarcito": {
+                    "NAME": "Trancio Farcito",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 2,50"
+                },
+                "filetofish": {
+                    "NAME": "Filet o Fish",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 3,50"
+                },
+                "chickennuggets": {
+                    "NAME": "Chicken Nuggets",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 3,00"
+                }
+            }
+        },
+        "kebab": {
+            "NAME": "Kebab",
+            "DESCRIPTION": "",
+            "PRODUCTS": {
+                "vaschettakebab": {
+                    "NAME": "Vaschetta Kebab",
+                    "DESCRIPTION": "",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 5,00"
+                        },
+                        {
+                            "NAME": "Grande",
+                            "PRICE": "€ 8,00"
+                        }
+                    ]
+                }
+            }
+        },
+        "fritti": {
+            "NAME": "Fritti",
+            "DESCRIPTION": "",
+            "PRODUCTS": {
+                "patatefritte": {
+                    "NAME": "Patate Fritte",
+                    "DESCRIPTION": "",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Piccola",
+                            "PRICE": "€ 1,50"
+                        },
+                        {
+                            "NAME": "Grande",
+                            "PRICE": "€ 2,50"
+                        }
+                    ]
+                }
+            }
+        },
+        "dolci": {
+            "NAME": "Dolci",
+            "DESCRIPTION": "",
+            "PRODUCTS": {
+                "calzoneallanutella": {
+                    "NAME": "Calzone alla Nutella",
+                    "DESCRIPTION": "pasta di pizza, nutella e zucchero a velo",
+                    "PRICE": "€ 5,00"
+                },
+                "piadinaallanutella": {
+                    "NAME": "Piadina alla Nutella",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 3,00"
+                }
+            }
+        },
+        "bevande": {
+            "NAME": "Bevande",
+            "DESCRIPTION": "",
+            "PRODUCTS": {
+                "acquanaturale": {
+                    "NAME": "Acqua Naturale",
+                    "DESCRIPTION": "",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "50cl",
+                            "PRICE": "€ 1,00"
+                        },
+                        {
+                            "NAME": "1.5L",
+                            "PRICE": "€ 2,00"
+                        }
+                    ]
+                },
+                "acquafrizzante": {
+                    "NAME": "Acqua Frizzante",
+                    "DESCRIPTION": "",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "50cl",
+                            "PRICE": "€ 1,00"
+                        },
+                        {
+                            "NAME": "1.5L",
+                            "PRICE": "€ 2,00"
+                        }
+                    ]
+                },
+                "bibitainlattina": {
+                    "NAME": "Bibita in Lattina",
+                    "DESCRIPTION": "",
+                    "SYNONYMS": [
+                        {
+                            "NAME": "Coca Cola",
+                            "PRICE": "€ 2,00"
+                        },
+                        {
+                            "NAME": "Fanta",
+                            "PRICE": "€ 2,00"
+                        },
+                        {
+                            "NAME": "Sprite",
+                            "PRICE": "€ 2,00"
+                        },
+                        {
+                            "NAME": "Coca Cola Zero",
+                            "PRICE": "€ 2,00"
+                        },
+                        {
+                            "NAME": "Coca Cola Light",
+                            "PRICE": "€ 2,00"
+                        },
+                        {
+                            "NAME": "Tè Pesca",
+                            "PRICE": "€ 2,00"
+                        },
+                        {
+                            "NAME": "Tè Limone",
+                            "PRICE": "€ 2,00"
+                        }
+                    ]
+                },
+                "tèpesca": {
+                    "NAME": "Tè Pesca",
+                    "DESCRIPTION": "50cl",
+                    "PRICE": "€ 2,50"
+                },
+                "cocacola1.5l": {
+                    "NAME": "Coca Cola 1.5L",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 3,00"
+                },
+                "redbull": {
+                    "NAME": "Red Bull",
+                    "DESCRIPTION": "",
+                    "PRICE": "€ 3,00"
+                }
+            }
+        }
+    }
+}
