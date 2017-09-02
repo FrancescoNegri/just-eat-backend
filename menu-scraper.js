@@ -1,7 +1,7 @@
 exports.scrapeMenu = function scrapeMenu(restaurant) {
     return new Promise((resolve, reject) => {
-        var request = require("request-promise-native");
-        var cheerio = require("cheerio");
+        const request = require("request-promise-native");
+        const cheerio = require("cheerio");
 
         const href = restaurant["HREF"];
         var restaurants = {};

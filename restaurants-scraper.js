@@ -1,42 +1,16 @@
-//MENU RISTORANTE
-// var request = require("request");
-// var cheerio = require("cheerio");
-
-// request({
-//     uri: "https://www.justeat.it/restaurants-alibabakebab3/menu",
-//     headers: {
-//         //Fondamentale per ricevere statusCode 200 da justeat
-//         "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"
-//      } 
-// }, function (error, response, body) {
-//     console.log(response.statusCode);
-//     var $ = cheerio.load(body);
-
-//     $("#container-menu--card > section:nth-child(2) > div > div:nth-child(1) > h4").each(function () {
-//         var link = $(this);
-//         var text = link.text();
-//         var href = link.attr("href");
-
-//         console.log(text.trim());
-//     });
-// });
-
-
-
-
-exports.scrapeRestaurants = function scrapeRestaurants() {
+exports.scrapeRestaurants = function scrapeRestaurants(url) {
     return new Promise((resolve, reject) => {
-        var request = require("request-promise-native");
-        var cheerio = require("cheerio");
+        const request = require("request-promise-native");
+        const cheerio = require("cheerio");
 
         var restaurants = {};
+
+        var uri = url.substring(0, url.indexOf("?"));
+        var qstr = url.substring(url.indexOf("?"));
         request(
             {
-                uri: "https://www.justeat.it/area/42121-reggio-emilia/",
-                qs: {
-                    lat: "44.7004035",
-                    long: "10.6301433"
-                },
+                uri: uri,
+                qs: parseQuery(qstr),
                 headers: {
                     //Fondamentale per ricevere statusCode 200 da justeat, altrimenti 500
                     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"
@@ -83,4 +57,14 @@ exports.scrapeRestaurants = function scrapeRestaurants() {
             });
     })
 
+}
+
+function parseQuery(qstr) {
+    var query = {};
+    var a = (qstr[0] === '?' ? qstr.substr(1) : qstr).split('&');
+    for (var i = 0; i < a.length; i++) {
+        var b = a[i].split('=');
+        query[decodeURIComponent(b[0])] = decodeURIComponent(b[1] || '');
+    }
+    return query;
 }
