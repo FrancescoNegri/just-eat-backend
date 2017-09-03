@@ -1,5 +1,6 @@
 const restaurantsscraper = require("./restaurants-scraper.js");
 const menuScraper = require("./menu-scraper.js");
+const clc = require("cli-color");
 var scrapingTarget = "";
 const updateTime = 2 * 60 * 1000;
 
@@ -22,7 +23,7 @@ const completeScraping = () => {
                 }
             })
             .catch(err => {
-                console.log("ERROR:", err);
+                console.log(clc.green("ERROR:", err));
                 return reject(err);
             });
     });
@@ -31,7 +32,7 @@ const completeScraping = () => {
 const scrapingCallback = (restaurants) => {
     // console.log(JSON.stringify(restaurants));
     // console.log("\n");
-    console.log(Object.keys(restaurants).length.toString(), "ristoranti disponibili al momento");
+    console.log(clc.green("Ristoranti disponibili:", Object.keys(restaurants).length.toString()));
     restaurantsData = restaurants;
     var updateInterval = setInterval(() => {
         restaurantsscraper.scrapeRestaurants(scrapingTarget)
@@ -39,7 +40,6 @@ const scrapingCallback = (restaurants) => {
                 aKey = JSON.stringify(Object.keys(restaurants).sort());
                 bKey = JSON.stringify(Object.keys(newRestaurants).sort());
                 if (aKey !== bKey) {
-                    console.log("DIVERSO!");
                     clearInterval(updateInterval);
                     restaurants = newRestaurants;
                     completeScraping()
@@ -47,7 +47,7 @@ const scrapingCallback = (restaurants) => {
                             scrapingCallback(restaurants);
                         })
                         .catch(err => {
-                            console.log(err);
+                            console.log(clc.green(err));
                         });
                 }
                 else {
@@ -58,18 +58,23 @@ const scrapingCallback = (restaurants) => {
 }
 
 exports.startScrapingService = (scrapingUrl) => {
-    scrapingTarget = scrapingUrl;
-    console.log("Servizio di scraping avviato");
-    console.log("L'update della lista dei ristoranti disponibili verrà effettuato ogni", updateTime / (60 * 1000), "minuti ...");
-    completeScraping()
-        .then(restaurants => {
-            scrapingCallback(restaurants);
-        })
-        .catch(err => {
-            console.log(err);
-        });
+    return new Promise((resolve, reject) => {
+        scrapingTarget = scrapingUrl;
+        console.log(clc.green("Servizio di scraping avviato"));
+        console.log(clc.green("L'update della lista dei ristoranti disponibili verrà effettuato ogni", updateTime / (60 * 1000), "minuti ..."));
+        completeScraping()
+            .then(restaurants => {
+                scrapingCallback(restaurants);
+                return resolve();
+            })
+            .catch(err => {
+                console.log(clc.green(err));
+                return reject(err);
+            });
+    });
 }
 
 exports.getRestaurantsData = () => {
+
     return restaurantsData;
 }
