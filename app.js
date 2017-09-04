@@ -6,8 +6,8 @@ const app = express();
 
 //config.json
 const PORT = 8080;
-const UPDATE_INTERVAL = 0.05;
-const URL = "https://www.justeat.it/area/42121-reggio-emilia/?lat=44.7004035&long=10.6301433";
+const UPDATE_INTERVAL = 1;
+const URL = "https://www.justeat.it/area/40139-bologna/?lat=44.4815163&long=11.3806012";
 
 scraper.startScrapingService(URL, UPDATE_INTERVAL)
     .then(() => {

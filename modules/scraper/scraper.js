@@ -1,14 +1,13 @@
 const restaurantsScraper = require("./src/restaurants-scraper.js");
 const menuScraper = require("./src/menu-scraper.js");
 const clc = require("cli-color");
-var scrapingTarget = "";
 
 var restaurantsData;
 
 //ATOMIC COUNTER VA SCHIFO, pensare ad altre soluzioni
-const completeScraping = () => {
+const completeScraping = (URL) => {
     return new Promise((resolve, reject) => {
-        restaurantsScraper.scrapeRestaurants(scrapingTarget)
+        restaurantsScraper.scrapeRestaurants(URL)
             .then(restaurants => {
                 var atomicCounter = 0;
                 for (var element in restaurants) {
@@ -19,6 +18,9 @@ const completeScraping = () => {
                             atomicCounter--;
                             if (atomicCounter == 0) return resolve(restaurants);
                         })
+                        .catch(err => {
+                            return reject(err);
+                        });
                 }
             })
             .catch(err => {
@@ -28,22 +30,50 @@ const completeScraping = () => {
     });
 }
 
-const scrapingCallback = (restaurants, UPDATE_INTERVAL) => {
-    // console.log(JSON.stringify(restaurants));
-    // console.log("\n");
+const selectiveScraping = (restaurants) => {
+    return new Promise((resolve, reject) => {
+        var atomicCounter = 0;
+        for (var element in restaurants) {
+            atomicCounter++;
+            if (!restaurants[element].hasOwnProperty("MENU")) {
+                menuScraper.scrapeMenu(restaurants[element])
+                    .then(restaurant => {
+                        restaurants[element] = restaurant;
+                        atomicCounter--;
+                        if (atomicCounter == 0) return resolve(restaurants);
+                    })
+                    .catch(err => {
+                        return reject(err);
+                    })
+            }
+            else {
+                atomicCounter--;
+                if (atomicCounter == 0) return resolve(restaurants);
+            }
+        }
+    });
+}
+
+const scrapingCallback = (restaurants, URL, UPDATE_INTERVAL) => {
     console.log(clc.green("Ristoranti disponibili:", Object.keys(restaurants).length.toString()));
     restaurantsData = restaurants;
     var restaurantsUpdateInterval = setInterval(() => {
-        restaurantsScraper.scrapeRestaurants(scrapingTarget)
+        restaurantsScraper.scrapeRestaurants(URL)
             .then(newRestaurants => {
                 aKey = JSON.stringify(Object.keys(restaurants).sort());
                 bKey = JSON.stringify(Object.keys(newRestaurants).sort());
                 if (aKey !== bKey) {
                     clearInterval(restaurantsUpdateInterval);
-                    restaurants = newRestaurants;
-                    completeScraping()
+                    Object.keys(restaurants).forEach((item) => {
+                        if (newRestaurants[item]) delete newRestaurants[item]
+                        else delete restaurants[item];
+                    });
+                    Object.keys(newRestaurants).forEach((item) => {
+                        restaurants[item] = newRestaurants[item];
+                    });
+                    selectiveScraping(restaurants)
                         .then(restaurants => {
-                            scrapingCallback(restaurants);
+                            scrapingCallback(restaurants, URL ,UPDATE_INTERVAL);
                         })
                         .catch(err => {
                             console.log(clc.green(err));
@@ -56,14 +86,13 @@ const scrapingCallback = (restaurants, UPDATE_INTERVAL) => {
     }, UPDATE_INTERVAL * 60 * 1000);
 }
 
-exports.startScrapingService = (scrapingUrl, UPDATE_INTERVAL) => {
+exports.startScrapingService = (URL, UPDATE_INTERVAL) => {
     return new Promise((resolve, reject) => {
-        scrapingTarget = scrapingUrl;
         console.log(clc.green("Servizio di scraping avviato"));
         console.log(clc.green("L'update della lista dei ristoranti disponibili verrà effettuato ogni", UPDATE_INTERVAL, "minuti ..."));
-        completeScraping()
+        completeScraping(URL)
             .then(restaurants => {
-                scrapingCallback(restaurants, UPDATE_INTERVAL);
+                scrapingCallback(restaurants, URL, UPDATE_INTERVAL);
                 return resolve();
             })
             .catch(err => {
