@@ -1,26 +1,28 @@
 const restaurantsScraper = require("./src/restaurants-scraper.js");
 const menuScraper = require("./src/menu-scraper.js");
 const clc = require("cli-color");
-
-var restaurantsData;
+const fs = require("fs");
 
 //ATOMIC COUNTER VA SCHIFO, pensare ad altre soluzioni
 const completeScraping = (URL) => {
     return new Promise((resolve, reject) => {
         restaurantsScraper.scrapeRestaurants(URL)
             .then(restaurants => {
-                var atomicCounter = 0;
-                for (var element in restaurants) {
-                    atomicCounter++;
-                    menuScraper.scrapeMenu(restaurants[element])
-                        .then(restaurant => {
-                            restaurants[element] = restaurant;
-                            atomicCounter--;
-                            if (atomicCounter == 0) return resolve(restaurants);
-                        })
-                        .catch(err => {
-                            return reject(err);
-                        });
+                if (Object.keys(restaurants).length == 0) return resolve(restaurants)
+                else {
+                    var atomicCounter = 0;
+                    for (var element in restaurants) {
+                        atomicCounter++;
+                        menuScraper.scrapeMenu(restaurants[element])
+                            .then(restaurant => {
+                                restaurants[element] = restaurant;
+                                atomicCounter--;
+                                if (atomicCounter == 0) return resolve(restaurants);
+                            })
+                            .catch(err => {
+                                return reject(err);
+                            });
+                    }
                 }
             })
             .catch(err => {
@@ -32,9 +34,8 @@ const completeScraping = (URL) => {
 
 const selectiveScraping = (restaurants) => {
     return new Promise((resolve, reject) => {
-        var atomicCounter = 0;
-        for (var element in restaurants) {
-            atomicCounter++;
+        var atomicCounter = Object.keys(restaurants).length;
+        Object.keys(restaurants).forEach((element) => {
             if (!restaurants[element].hasOwnProperty("MENU")) {
                 menuScraper.scrapeMenu(restaurants[element])
                     .then(restaurant => {
@@ -50,13 +51,15 @@ const selectiveScraping = (restaurants) => {
                 atomicCounter--;
                 if (atomicCounter == 0) return resolve(restaurants);
             }
-        }
+        });
     });
 }
 
+var test = 0;
+
 const scrapingCallback = (restaurants, URL, UPDATE_INTERVAL) => {
     console.log(clc.green("Ristoranti disponibili:", Object.keys(restaurants).length.toString()));
-    restaurantsData = restaurants;
+    saveRestaurantsToJSONFile(restaurants);
     var restaurantsUpdateInterval = setInterval(() => {
         restaurantsScraper.scrapeRestaurants(URL)
             .then(newRestaurants => {
@@ -73,7 +76,7 @@ const scrapingCallback = (restaurants, URL, UPDATE_INTERVAL) => {
                     });
                     selectiveScraping(restaurants)
                         .then(restaurants => {
-                            scrapingCallback(restaurants, URL ,UPDATE_INTERVAL);
+                            scrapingCallback(restaurants, URL, UPDATE_INTERVAL);
                         })
                         .catch(err => {
                             console.log(clc.green(err));
@@ -102,7 +105,9 @@ exports.startScrapingService = (URL, UPDATE_INTERVAL) => {
     });
 }
 
-exports.getRestaurantsData = () => {
-
-    return restaurantsData;
+const saveRestaurantsToJSONFile = (restaurants) => {
+    var json = JSON.stringify(restaurants);
+    fs.writeFileSync("output/restaurants.json", json, "utf8", () => {
+        console.log(clc.green("Restaurants data successfully stored in a JSON file!"));
+    });
 }
