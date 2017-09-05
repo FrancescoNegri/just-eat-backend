@@ -1,12 +1,33 @@
 const fs = require("fs");
 const clc = require("cli-color");
+const path = require("path");
+const app = require("express")();
 
-module.exports = function (app, port) {
-    fs.readdirSync(__dirname).forEach(function (file) {
-        if (file == "index.js" || file.substr(file.lastIndexOf('.') + 1) !== "js") return;
-        var name = file.substr(0, file.indexOf("."));
-        require('./' + name)(app);
-    });
+module.exports = function (port) {
+    function recursiveRoutes(folderName) {
+        var t = fs.readdirSync(folderName);
+        t.forEach(function (file) {
+
+            var fullName = path.join(folderName, file);
+            var stat = fs.lstatSync(fullName);
+
+            if (stat.isDirectory()) {
+                recursiveRoutes(fullName);
+            } else if (file.toLowerCase().includes(".js")) {
+                if (file == "index.js" && folderName !== "routes") {
+                    fullName = fullName.replace(/\\/g, "/");
+                    fullName = fullName.substring(fullName.indexOf("/") + 1, fullName.indexOf("index.js"));
+                    require('./' + fullName)(app);
+                }
+                else if (file !== "index.js") {
+                    fullName = fullName.replace(/\\/, "/");
+                    fullName = fullName.substring(fullName.indexOf("/") + 1, fullName.indexOf("."));
+                    require('./' + fullName)(app);
+                }
+            }
+        });
+    }
+    recursiveRoutes("routes");
 
     app.use(function (req, res, next) {
         res.header("Access-Control-Allow-Origin", "*");
