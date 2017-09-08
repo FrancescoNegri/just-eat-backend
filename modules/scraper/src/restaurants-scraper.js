@@ -41,6 +41,7 @@ exports.scrapeRestaurants = function scrapeRestaurants(url) {
 
                     var obj = {
                         "NAME": name,
+                        "ID": key,
                         "CATEGORY": category,
                         "LOGO": logo,
                         "RATING": rating,
