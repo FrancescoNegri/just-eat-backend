@@ -3,7 +3,6 @@ const menuScraper = require("./src/menu-scraper.js");
 const clc = require("cli-color");
 const fs = require("fs");
 
-//ATOMIC COUNTER VA SCHIFO, pensare ad altre soluzioni
 const completeScraping = (URL) => {
     return new Promise((resolve, reject) => {
         restaurantsScraper.scrapeRestaurants(URL)
