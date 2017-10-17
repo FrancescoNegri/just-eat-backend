@@ -2,6 +2,7 @@ const restaurantsScraper = require("./src/restaurants-scraper.js");
 const menuScraper = require("./src/menu-scraper.js");
 const clc = require("cli-color");
 const fs = require("fs");
+const config = require("../../config.json");
 
 const completeScraping = (URL) => {
     return new Promise((resolve, reject) => {
@@ -90,7 +91,8 @@ const scrapingCallback = (restaurants, URL, UPDATE_INTERVAL) => {
 
 exports.startScrapingService = (URL, UPDATE_INTERVAL) => {
     return new Promise((resolve, reject) => {
-        console.log(clc.green("Servizio di scraping avviato"));
+        let area = config["URL"].slice(config["URL"].indexOf("area/") + 5, config["URL"].indexOf("/?lat"));
+        console.log(clc.green("Servizio di scraping avviato per:"), clc.underline(area));
         console.log(clc.green("L'update della lista dei ristoranti disponibili verrà effettuato ogni", UPDATE_INTERVAL, "minuti ..."));
         completeScraping(URL)
             .then(restaurants => {
