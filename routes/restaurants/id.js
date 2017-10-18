@@ -5,7 +5,8 @@ module.exports = function (app) {
             res.json(restaurants[req.params["id"]]);
         }
         else {
-            res.json({MESSAGE: "wrong id"});
+            res.status = 404;
+            res.json({MESSAGE: "Id not found"});
         }
     });
 }
