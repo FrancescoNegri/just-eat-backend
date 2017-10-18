@@ -2,5 +2,5 @@
     "EXPRESS_PORT": 8080,
     "UPDATE_INTERVAL": 2,
     "URL": "https://www.justeat.it/area/20124-milano/?lat=45.4858877&long=9.20428270000002",
-    "DRINKS_AND_MENUS_FILTER": ["menu", "menù", "bevande", "birre", "vini", "creailtuopanino", "bollicine", "cocktelleria"]
+    "DRINKS_AND_MENUS_FILTER": ["menu", "menù", "bevande", "birre", "vini", "creailtuopanino", "bollicine", "cocktelleria", "lebibite"]
 }

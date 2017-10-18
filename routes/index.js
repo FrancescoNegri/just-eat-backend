@@ -37,6 +37,7 @@ module.exports = function (port) {
     });
 
     app.all("*", function (req, res) {
+        res.status(404);
         res.send("Error 404: PAGE NOT FOUND");
     });
 
