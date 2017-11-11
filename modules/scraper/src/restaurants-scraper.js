@@ -36,8 +36,8 @@ exports.scrapeRestaurants = function scrapeRestaurants(url) {
                     var category = listingItem.children("a").children("div.mediaElement-content").children("div").children("div.g-col.g-span7.g-span8--wide.g-col--divide").children("p.infoText.infoText--primary").children("strong").text();
                     //Valutazione utenti JustEat
                     var rating = listingItem.children("a").children("div.mediaElement-content").children("div").children("div.g-col.g-span7.g-span8--wide.g-col--divide").children("div").children("meta:nth-child(3)").prop("content");
-                    //var bestRating = listingItem.children("a").children("div.mediaElement-content").children("div").children("div.g-col.g-span7.g-span8--wide.g-col--divide").children("div").children("meta:nth-child(6)").prop("content");
-                    //rating = ((5 * rating) / bestRating).toFixed(1);
+                    var bestRating = listingItem.children("a").children("div.mediaElement-content").children("div").children("div.g-col.g-span7.g-span8--wide.g-col--divide").children("div").children("meta:nth-child(6)").prop("content");
+                    rating = ((5 * rating) / bestRating).toFixed(1);
 
                     var key = href.substring(href.indexOf("-") + 1, href.indexOf("/", href.indexOf("-") + 1));
                     var id = listingItem.children("a").prop("data-test-restaurant-id");
