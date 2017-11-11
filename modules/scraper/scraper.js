@@ -15,7 +15,7 @@ const completeScraping = (URL) => {
                         atomicCounter++;
                         menuScraper.scrapeMenu(restaurants[element])
                             .then(restaurant => {
-                                restaurants[element] = restaurant;
+                                restaurants[restaurant["KEY"]] = restaurant;
                                 atomicCounter--;
                                 if (atomicCounter == 0) return resolve(restaurants);
                             })

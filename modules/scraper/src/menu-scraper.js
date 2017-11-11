@@ -25,12 +25,14 @@ exports.scrapeMenu = function scrapeMenu(restaurant) {
                 $("section", "#menu-container--card").each(function () {
                     var category = $(this);
                     var categoryName = category.prop("data-test-id");
+                    var categoryID = category.prop("data-category-id");
                     var categoryDescription = category.children("div").children("div.menuCard-category-description").text();
                     if (filterDrinksAndMenus(categoryName)) {
 
                         restaurant["MENU"][normalizeString(categoryName)] = {
                             "NAME": categoryName,
                             "DESCRIPTION": categoryDescription,
+                            "ID": categoryID,
                             "PRODUCTS": {}
                         };
                         $("div > div").each(function () {
@@ -39,10 +41,12 @@ exports.scrapeMenu = function scrapeMenu(restaurant) {
                                 var productName = product.children("h4").text().trim();
                                 var productDescription = product.children("div.product-description").text().trim();
                                 var productPrice = product.children("div.product-price.u-noWrap").text().trim();
+                                var productID = product.prop("data-product-id");
 
                                 var obj = {
                                     "NAME": productName,
-                                    "DESCRIPTION": productDescription
+                                    "DESCRIPTION": productDescription,
+                                    "ID": productID
                                 };
 
                                 var synonymsClass = product.prop("class");
@@ -53,8 +57,13 @@ exports.scrapeMenu = function scrapeMenu(restaurant) {
                                         if (synonym.parent().parent().children("h4").text().trim() == productName) {
                                             var synonymName = synonym.text().trim();
                                             var synonymPrice = synonym.parent().first().children("div.product-price.u-noWrap").text().trim();
+                                            var synonymID = synonym.parent().prop("data-product-id");
 
-                                            obj["SYNONYMS"].push({ "NAME": synonymName, "PRICE": synonymPrice });
+                                            obj["SYNONYMS"].push({
+                                                "NAME": synonymName,
+                                                "PRICE": synonymPrice,
+                                                "ID": synonymID
+                                            });
                                         }
                                     })
                                 }
@@ -62,6 +71,7 @@ exports.scrapeMenu = function scrapeMenu(restaurant) {
                                     obj["PRICE"] = productPrice;
                                 }
                                 restaurant["MENU"][normalizeString(categoryName)]["PRODUCTS"][normalizeString(productName)] = obj;
+                                
                             }
                         })
                     }
